@@ -10,6 +10,7 @@ from fastapi.staticfiles import StaticFiles
 from cleaner import cleanup_old_files
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.interval import IntervalTrigger
+import uvicorn
 
 scheduler = AsyncIOScheduler()
 scheduler.add_job(cleanup_old_files, IntervalTrigger(minutes=30))
@@ -78,3 +79,6 @@ async def startup_event():
     
 async def shutdown_event():
     scheduler.shutdown()
+    
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=os.getenv("PORT", default=5000), log_level="info")
