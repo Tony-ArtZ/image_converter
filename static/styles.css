@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+  --primary-color: #4caf50;
+  --primary-dark: #45a049;
+  --text-color: #ffffff;
+  --background-color: rgba(0, 0, 0, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+body {
+  background-color: #071c39;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  background-color: var(--background-color);
+  padding: 2.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  z-index: 1;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+input[type="file"],
+select {
+  padding: 0.75rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+
+#spinner {
+  color: var(--primary-color);
+  margin-left: 10px;
+}
+
+option {
+  color: black;
+}
+
+button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+#status,
+#download {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#download a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#download a:hover {
+  background-color: var(--primary-dark);
+}
+
+.gradient {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+  opacity: 0.3;
+  filter: blur(100px);
+}
+
+.file-upload-label {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload-label:hover {
+  background-color: var(--primary-dark);
+}
+
+.file-upload-label i {
+  margin-right: 0.5rem;
+}
+
+#fileName {
+  display: block;
+  width: 100%;
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+}

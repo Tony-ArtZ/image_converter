@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Converter</title>
+    <link rel="stylesheet" href="static/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Converter</h1>
+      <form id="uploadForm">
+        <div class="input-group">
+          <input type="file" id="imageFile" required hidden />
+          <label for="imageFile" class="file-upload-label">
+            <i class="fas fa-upload"></i> Upload File
+          </label>
+          <span id="fileName"></span>
+        </div>
+        <div class="input-group">
+          <label for="outputFormat">Select output format:</label>
+          <select id="outputFormat" required>
+            <option value="">Select output format</option>
+          </select>
+        </div>
+        <button type="submit">
+          Convert <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+      <div id="status"></div>
+      <div id="download"></div>
+    </div>
+    <div class="gradient"></div>
+    <script src="static/script.js"></script>
+  </body>
+</html>
